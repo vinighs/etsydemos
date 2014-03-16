@@ -3,6 +3,8 @@ ruby "2.1.1"
 gem 'rails', '4.0.4'
 
 gem 'paperclip', :git =>'git://github.com/thoughtbot/paperclip.git'
+gem "paperclip-dropbox", ">= 1.1.7"
+gem "figaro"
 
 gem 'sass-rails', '~> 4.0.2'
 gem 'bootstrap-sass', '~> 3.1.1'
