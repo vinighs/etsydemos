@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
+ruby "2.1.1"
 gem 'rails', '4.0.4'
 
 gem 'paperclip', :git =>'git://github.com/thoughtbot/paperclip.git'
 
-
-gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.2'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'uglifier', '>= 1.3.0'
@@ -13,6 +12,14 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
+group :production do
+	gem "pg", "~> 0.17.1"
+	gem 'rails_12factor'
+end
+
+group :development, :test do
+	gem 'sqlite3'
+end
 
 group :doc do
   gem 'sdoc', require: false
