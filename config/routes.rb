@@ -1,4 +1,5 @@
 Etsydemo::Application.routes.draw do
+  devise_for :models
   resources :listings
 
   get "pages/about"
